@@ -26,3 +26,16 @@ The mapping of CLR type to EDM type is ambiguous because multiple CLR types matc
    at System.Data.Entity.Core.Metadata.Edm.ObjectItemCollection.LoadAssemblyFromCache
    (Assembly assembly, Boolean loadReferencedAssemblies, EdmItemCollection edmItemCollection, Action`1 logLoadMessage)
 ```
+
+<br/>
+
+**HOW TO SOLVE**
+
+Place the two `DbContext` in separated assemblies. The solution `EFClassCollisionTwoAssemblies` shows this approach: a console app using two assemblies: LibA and LibB, each hosting a `DbContext` on the same database and same tables. In console app we can use both models without issues.
+
+Console app output:
+
+```
+Reading from LibA.ContosoEntitiesA:  --> Contoso 512MB MP3 Player E51 Silver [1]
+Reading from LibB.ContosoEntitiesB:  --> Contoso 512MB MP3 Player E51 Silver [1]
+```

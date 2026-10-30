@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConsoleApp/ConsoleApp.csproj" Id="5d4b11c2-610d-4023-8c1a-ba871b134c9f" />
+  <Project Path="LibA/LibA.csproj" Id="e6072163-9993-4a51-b3cd-f0fe52a7bf8c" />
+  <Project Path="LibB/LibB.csproj" Id="fcb088d1-88ef-42d0-b58d-d3eb43632ba5" />
+</Solution>
